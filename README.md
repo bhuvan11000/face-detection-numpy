@@ -35,32 +35,48 @@ The project uses the **Eigenfaces** method:
 
 ## Setup Instructions
 
-### 1. Prerequisites
-Ensure you have Python installed along with the required libraries:
+### 1. Virtual Environment Setup
+It is recommended to use a virtual environment to manage dependencies:
+
+```bash
+# Create a virtual environment
+python3 -m venv .venv
+
+# Activate the virtual environment
+source .venv/bin/activate
+```
+
+### 2. Install Dependencies
+Ensure you have the required libraries installed:
 ```bash
 pip install numpy pillow matplotlib
 ```
 
-### 2. Download the Dataset
+**Note for Linux users:** To enable the interactive pop-up windows for visualizations, you may need to install the Tkinter backend on your system:
+```bash
+sudo apt-get install python3-tk
+```
+
+### 3. Download the Dataset
 The dataset is hosted on Google Drive. 
 1.  Go to the [Dataset Folder](https://drive.google.com/drive/folders/1qGdO7TrBOeL5t4PPsK42wodwd-xoPxoy?usp=drive_link).
 2.  Download the **`dataset.zip`** file.
 3.  Extract the contents of `dataset.zip` directly into the project root directory. Your folder structure should now include `dataset/training/` and `dataset/testing/`.
 
-### 3. Training the Model
+### 4. Training the Model
 Run the training script to generate the model:
 ```bash
 python3 train.py
 ```
 This will display the mean face and the top eigenfaces, then save `model.npz`.
 
-### 4. Running Predictions
+### 5. Running Predictions
 To recognize a face from an image:
 ```bash
-python3 predict.py dataset/testing/person_1/10.pgm
+python3 predict.py dataset/testing/p_1.pgm
 ```
 
-### 5. Testing Accuracy
+### 6. Testing Accuracy
 To see how well the model performs across the entire test set:
 ```bash
 python3 test_accuracy.py
