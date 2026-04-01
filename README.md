@@ -1,4 +1,4 @@
-# Face Detection using NumPy (Eigenfaces)
+# Face Detection using PCA (Eigenfaces)
 
 This project implements a face recognition system using the **Eigenface** algorithm, which leverages Principal Component Analysis (PCA) to represent faces as a linear combination of "eigenfaces." It is built entirely using NumPy, PIL (Pillow), and Matplotlib.
 
